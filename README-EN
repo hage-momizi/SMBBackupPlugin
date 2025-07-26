@@ -1,0 +1,75 @@
+# SMBBackupPlugin  
+Back up to an SMB server
+
+# 🌐 Nebulix SMBBackupPlugin - Backup Plugin for Paper 1.20 to 1.21
+
+**Nebulix SMBBackupPlugin** is a high-functionality backup plugin compatible with **Paper 1.20 to 1.21**,  
+which allows automatic and manual backups of world data or any directories to an **SMB (Samba) server**.
+
+---
+
+## ✨ Key Features
+
+✅ **Automatic and manual backups to an SMB server**  
+✅ **Scheduled backups using cron format**  
+✅ **Supports worlds and multiple arbitrary directories**  
+✅ **Immediate backup with `/backup now` command**  
+✅ **Displays estimated time, file count, and size before backup**  
+✅ **Checks and warns about SMB server free space (quota)**  
+✅ **Convenient commands like `/backup reload` and `/backup status`**  
+✅ **Compatible with Paper 1.20.x to 1.21.x**
+
+---
+
+## 📄 License and Terms of Use
+
+© 2025 **MomiziDC**
+
+This plugin, **"Nebulix SMBBackupPlugin"**, is developed by MomiziDC.
+
+You may use this plugin only if you agree to the following terms:
+
+1. Modification, decompilation, and reverse engineering of this plugin are prohibited.  
+2. Redistribution (distribution or reposting) of this plugin is prohibited.  
+3. The source code of this plugin is not publicly available.
+
+> ⚠️ Please do not use this plugin if you do not agree to these terms.
+
+---
+
+## ⚙️ Installation
+
+1. Place the downloaded `.jar` file in the `plugins` folder.  
+2. Start the server to generate the `config.yml` file automatically, then edit it.  
+3. Reload the configuration with `/backup reload` command if needed.
+
+---
+
+## 🛠️ Example Configuration (`config.yml`)
+
+```yaml
+smb:
+  # IP address or hostname of the SMB server
+  address: "192.168.1.100"
+
+  # SMB username
+  username: "your_username"
+
+  # SMB password
+  password: "your_password"
+
+  # Share name
+  share: "backup_share"
+
+  # Remote directory (path inside the share)
+  remoteDir: "minecraft_backup"
+
+backup:
+  # Directories to back up
+  directories:
+    - ./world
+
+schedule:
+  # Enable scheduled backups
+  enabled: true
+  cron: "0 2 * * *"  # Default: every day at 2 AM

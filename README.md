@@ -6,6 +6,8 @@ SMBサーバーへバックアップをします / Back up to an SMB server
 **Nebulix SMBBackupPlugin** は、SMB（Samba）サーバーにワールドデータや任意のディレクトリを  
 **自動・手動でバックアップできる**、**Paper 1.20～1.21対応**の高機能バックアッププラグインです。
 
+[ダウンロード](https://github.com/hage-momizi/SMBBackupPlugin/releases/tag/Latest)
+
 ---
 
 ## ✨ 主な機能
